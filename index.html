@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Site Portal | Sparsh Engineers and Consultants</title>
+<meta name="description" content="Private client portal for Sparsh Engineers and Consultants. Log in with your site name and password to view your site information sheet.">
+<!-- Private page: keep it out of search results -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#13314E">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="p-header">
+  <div class="p-wrap p-header-inner">
+    <a href="index.html" class="p-brand" aria-label="Sparsh Engineers and Consultants — Home">
+      <svg viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
+        <rect x="6" y="6" width="34" height="7" fill="#F8F6F1"/>
+        <rect x="6" y="6" width="7" height="34" fill="#F8F6F1"/>
+        <circle cx="10" cy="10" r="3.4" fill="#E2581E"/>
+      </svg>
+      <span class="p-brand-text">
+        <span class="p-brand-name">SPARSH</span>
+        <span class="p-brand-sub">Client Portal</span>
+      </span>
+    </a>
+    <a href="index.html" class="p-back">&larr; Back to website</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ LOGIN ============ -->
+  <section id="login-view" class="login" aria-labelledby="login-title">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="p-wrap login-inner">
+
+      <div class="login-intro">
+        <p class="eyebrow eyebrow-light">Client Portal</p>
+        <h1 id="login-title">Your site,<br>on one sheet.</h1>
+        <p>Log in with the site name and password Sparsh Engineers gave you to see your site information sheet.</p>
+      </div>
+
+      <form id="login-form" class="login-card" novalidate>
+        <div class="field">
+          <label for="site-name">Site name</label>
+          <input id="site-name" name="site-name" type="text" autocomplete="username" autocapitalize="off" spellcheck="false" required>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="pw-wrap">
+            <input id="password" name="password" type="password" autocomplete="current-password" required>
+            <button type="button" id="pw-toggle" class="pw-toggle" aria-label="Show password" aria-pressed="false">Show</button>
+          </div>
+        </div>
+
+        <p id="login-error" class="form-error" role="alert" aria-live="assertive" hidden></p>
+
+        <button type="submit" id="login-btn" class="btn btn-primary btn-block">
+          <span class="btn-label">View site information</span>
+        </button>
+
+        <p class="help">
+          Lost your password? <a href="https://wa.me/919011042504?text=Hi%2C%20I%20need%20help%20with%20my%20site%20portal%20login." target="_blank" rel="noopener">Message us on WhatsApp</a>
+          or call <a href="tel:+919011042504">90110 42504</a>.
+        </p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ============ SHEET VIEW ============ -->
+  <section id="sheet-view" class="sheet" hidden aria-labelledby="sheet-title">
+    <div class="p-wrap">
+
+      <div class="sheet-head">
+        <div>
+          <p class="eyebrow">Site information sheet</p>
+          <h1 id="sheet-title" tabindex="-1">&nbsp;</h1>
+          <p id="sheet-meta" class="sheet-meta"></p>
+        </div>
+        <div class="sheet-actions">
+          <button type="button" id="download-btn" class="btn btn-primary btn-small">Download CSV</button>
+          <button type="button" id="logout-btn" class="btn btn-dark btn-small">Log out</button>
+        </div>
+      </div>
+
+      <p id="sheet-status" class="sheet-status" role="status" aria-live="polite"></p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="p-footer">
+  <div class="p-wrap p-footer-inner">
+    <p>&copy; <span id="year"></span> Sparsh Engineers and Consultants &middot; Proprietor: Upesh Shah</p>
+    <p><a href="mailto:sparshengineers.pune@gmail.com">sparshengineers.pune@gmail.com</a> &middot; <a href="tel:+919011042504">+91 90110 42504</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
